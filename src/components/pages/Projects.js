@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from "react";
-import {Card, Col, Row} from "react-bootstrap";
+import {Card, Col, Row, Carousel} from "react-bootstrap";
+
 const Projects = () => {
   const [projects, setProjects] = useState([
     {
@@ -12,6 +13,7 @@ const Projects = () => {
         "Implemented Google Analytics and Facebook Pixel to track the website traffic and user behaviors.",
         "Maintained the customer’s data by using Amazon AWS S3 Bucket."
       ],
+      img: [],
       url: "https//preptoyourdoor.netlify.app"
     },
     {
