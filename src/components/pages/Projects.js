@@ -1,8 +1,15 @@
-import React, {Fragment, useState} from "react";
+import React from "react";
 import {Card, Col, Row, Carousel} from "react-bootstrap";
+import ptyd_home from "../../static/images/PTYD-home.png";
+import ptyd_giftcard from "../../static/images/PTYD-giftcard.png";
+import ptyd_mealschedule from "../../static/images/PTYD-Mealschedule.png";
+import ptyd_menu from "../../static/images/PTYD-menu.png";
+import ptyd_mealplan from "../../static/images/PTYD-mealPlan.png";
+import ptyd_findus from "../../static/images/PTYD-findus.png";
+import ptyd_menuthisweek from "../../static/images/PTYD-menuthisweek.png";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([
+  const projects = [
     {
       id: 1,
       name: "Prep-To-Your-Door",
@@ -13,7 +20,15 @@ const Projects = () => {
         "Implemented Google Analytics and Facebook Pixel to track the website traffic and user behaviors.",
         "Maintained the customer’s data by using Amazon AWS S3 Bucket."
       ],
-      img: [],
+      img: [
+        ptyd_findus,
+        ptyd_giftcard,
+        ptyd_home,
+        ptyd_mealplan,
+        ptyd_mealschedule,
+        ptyd_menu,
+        ptyd_menuthisweek
+      ],
       url: "https//preptoyourdoor.netlify.app"
     },
     {
@@ -24,6 +39,7 @@ const Projects = () => {
         "Applied CSS and Reactjs to develop features for the front-end.",
         "Managed and maintain user’s information through the database by using MongoDB."
       ],
+      img: [],
       url: "#"
     },
     {
@@ -33,9 +49,10 @@ const Projects = () => {
         "Worked closely with the designer to build the website’s features by applying HTML, CSS, JavaScript.",
         "Applied JQuery to develop animative and responsive web pages."
       ],
+      img: [],
       url: "#"
     }
-  ]);
+  ];
   return (
     <Card
       id='projects'

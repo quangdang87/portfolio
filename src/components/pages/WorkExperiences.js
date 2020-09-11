@@ -1,8 +1,8 @@
 import React, {Fragment, useState, useEffect} from "react";
-import {Card, Col, Row, Button} from "react-bootstrap";
+import {Card, Col, Row} from "react-bootstrap";
 
 const WorkExperiences = () => {
-  const [experienced, setExperienced] = useState([
+  const experienced = [
     {
       id: 1,
       company: "Infinite Options LLC",
@@ -26,18 +26,11 @@ const WorkExperiences = () => {
         "Utilized critical thinking and organizational skills to obtain and streamline files and student records."
       ]
     }
-  ]);
-  const [current, setCurrent] = useState(null);
-
-  useEffect(() => {
-    console.log(experienced);
-    setCurrent(experienced[0]);
-  }, []);
+  ];
+  const [current, setCurrent] = useState(experienced[0]);
 
   const show = index => {
-    console.log(index);
     setCurrent(experienced[index]);
-    console.log(current);
   };
   return (
     <Fragment>

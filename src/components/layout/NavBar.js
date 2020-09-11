@@ -16,7 +16,10 @@ const NavBar = ({isSticky}) => {
           href='https://www.linkedin.com/in/quangdang87/'
           style={{alignItems: "center"}}
         >
-          <i class='fab fa-linkedin fa-2x' style={{marginRight: "20px"}}></i>
+          <i
+            className='fab fa-linkedin fa-2x'
+            style={{marginRight: "20px"}}
+          ></i>
           <h3 style={{color: "white"}} className='mt-3'>
             QUANG DANG{"  "}
           </h3>

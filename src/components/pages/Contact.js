@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import {Card, Col, Row} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 import emoji from "emoji-dictionary";
 const Contact = () => {
   return (
@@ -21,10 +21,10 @@ const Contact = () => {
         </Card.Header>
 
         <Card.Body>
-          <Card.Text className='greeting'>
-            Thank you for your time to go through all of this. If you like my
-            page and want to help me, Please feel free to contact me thru my
-            email at{" "}
+          <Card.Text className='greeting_font'>
+            &#x1F606; Thank you for your time to go through all of this. If you
+            like my page and want to help me, Please feel free to contact me
+            thru my email at{" "}
             <span style={{fontSize: "52px"}}>vinhquangdang1@gmail.com</span> or
             my number is <span>1 (510)-584-6166</span>. I am looking forward to
             hear from you. Hope that we can have a chance to work together.
