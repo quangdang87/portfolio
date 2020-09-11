@@ -193,4 +193,31 @@ h6 {
 }
 .btn_active {
   background-color: #177485;
+  box-shadow: 2px 2px 2px 2px rgba(173, 196, 214, 0.904) inset;
+}
+
+.project_box {
+  box-shadow: 2px 4px 8px 4px rgba(107, 127, 141, 0.904);
+  transition: 0.3s;
+  width: 90%;
+  margin: 20px auto 20px auto;
+  padding: 5%;
+  border-radius: 10px;
+}
+.greeting {
+  font-family: "Dancing Script", "sans serif";
+  font-size: 40px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 48px;
+  width: 100%;
+  padding: 10px;
+}
+
+.a_hover {
+  height: 80px;
+}
+#name_link {
+  text-decoration: none;
 }

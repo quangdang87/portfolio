@@ -8,12 +8,22 @@ const NavBar = ({isSticky}) => {
       <div
         style={{
           paddingLeft: "20px",
-          display: "flex",
-          textAlign: "center"
+          display: "flex"
         }}
       >
-        <img src={photoID} />
-        <h3 style={{color: "white"}}>QUANG DANG</h3>
+        <a
+          id='name_link'
+          className='d-flex mt-0 a_hover'
+          href='https://www.linkedin.com/in/quangdang87/'
+          style={{alignItems: "center"}}
+        >
+          <img src={photoID} />
+          <h3 style={{color: "white"}} className='mt-3'>
+            QUANG DANG{"  "}
+          </h3>
+
+          <i class='fab fa-linkedin fa-2x' style={{marginLeft: "20px"}}></i>
+        </a>
       </div>
 
       <ul style={{paddingRight: "50px"}}>

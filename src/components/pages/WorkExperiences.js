@@ -66,24 +66,22 @@ const WorkExperiences = () => {
                   }}
                   key={index}
                 >
-                  <span>
-                    <p className='text1'>{item.company}</p>
-                    <ul
-                      style={{listStyle: "none", maginTop: "0px"}}
-                      className='list1'
+                  <p className='text1'>{item.company}</p>
+                  <ul
+                    style={{listStyle: "none", maginTop: "0px"}}
+                    className='list1'
+                  >
+                    <li
+                      className='text2'
+                      style={{fontWeight: "700", fontSize: "15px"}}
                     >
-                      <li
-                        className='text2'
-                        style={{fontWeight: "700", fontSize: "15px"}}
-                      >
-                        {" "}
-                        {item.role}{" "}
-                      </li>
-                      <li className='text2' style={{fontSize: "13px"}}>
-                        {item.duration}
-                      </li>
-                    </ul>
-                  </span>
+                      {" "}
+                      {item.role}{" "}
+                    </li>
+                    <li className='text2' style={{fontSize: "13px"}}>
+                      {item.duration}
+                    </li>
+                  </ul>
                 </button>
               ))}
             </Col>
