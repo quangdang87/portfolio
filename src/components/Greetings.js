@@ -6,7 +6,7 @@ const Greetings = ({element}) => {
   return (
     <div ref={element} className='box'>
       <Card style={{background: "transparent"}}>
-        <Card.Body id='no_padding'>
+        <Card.Body className='no_padding'>
           <Row id='greeting_wrap'>
             <img src={photoID} id='greeting_img' alt='photo_id' />
 

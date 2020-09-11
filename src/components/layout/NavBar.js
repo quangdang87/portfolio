@@ -14,6 +14,7 @@ const NavBar = ({isSticky}) => {
           id='name_link'
           className='d-flex mt-0 a_hover'
           href='https://www.linkedin.com/in/quangdang87/'
+          target='_blank'
           style={{alignItems: "center"}}
         >
           <i

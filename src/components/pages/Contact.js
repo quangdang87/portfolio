@@ -20,7 +20,7 @@ const Contact = () => {
           </Card.Title>
         </Card.Header>
 
-        <Card.Body>
+        <Card.Body className=' backgroundFlower'>
           <Card.Text className='greeting_font'>
             &#x1F606; Thank you for your time to go through all of this. If you
             like my page and want to help me, Please feel free to contact me
