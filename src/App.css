@@ -196,6 +196,13 @@ h6 {
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
+.text5 {
+  padding: 5px;
+  margin: auto;
+  color: #050505;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
 .list1 {
   padding-left: 0px;
 }
@@ -284,5 +291,25 @@ h6 {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   overflow: hidden;
+  color: black;
+}
+
+.sideBar {
+  width: 60px;
+  height: 200px;
+  text-align: center;
+  background-color: #f2f3fa;
+  position: fixed;
+  z-index: 1;
+  margin-top: 10%;
+  margin-left: 2rem;
+  border-radius: 3rem;
+}
+
+.icon_block {
+  display: inline-block;
+  max-height: 100%;
+  margin-top: 15px;
+  position: relative;
   color: black;
 }

@@ -10,6 +10,7 @@ import Education from "./components/pages/Education";
 import Contact from "./components/pages/Contact";
 import Greetings from "./components/Greetings";
 import {Row, Col, Container} from "react-bootstrap";
+import SideBar from "./components/SideBar";
 
 function App() {
   const {isSticky, element} = useSticky();
@@ -22,7 +23,7 @@ function App() {
       }}
     >
       <NavBar isSticky={isSticky} />
-
+      <SideBar />
       <Container>
         <Row>
           <Greetings element={element} />
