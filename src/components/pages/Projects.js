@@ -46,7 +46,7 @@ class Projects extends Component {
             ptyd_menu,
             ptyd_menuthisweek
           ],
-          url: "https//preptoyourdoor.netlify.app",
+          url: "https://preptoyourdoor.netlify.app",
           github: "https://github.com/infinite-options/Prep-To-Your-Door"
         },
         {
@@ -105,7 +105,12 @@ class Projects extends Component {
                         </Tooltip>
                       }
                     >
-                      <a href={project.url} className='text3' id='name_link'>
+                      <a
+                        href={project.url}
+                        target='_blank'
+                        className='text3'
+                        id='name_link'
+                      >
                         {project.name}
                       </a>
                     </OverlayTrigger>
