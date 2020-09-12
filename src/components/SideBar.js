@@ -1,14 +1,17 @@
 import React from "react";
 
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
-const SideBar = () => {
+const SideBar = ({show, setShow}) => {
+  const sendEmail = () => {
+    setShow(!show);
+  };
   return (
     <div className='sideBar text5'>
       <OverlayTrigger
         placement={"top"}
         overlay={
           <Tooltip>
-            <strong>Linked In Profile</strong>
+            <strong> LinkedIn Profile </strong>
           </Tooltip>
         }
       >
@@ -25,7 +28,7 @@ const SideBar = () => {
         placement={"top"}
         overlay={
           <Tooltip>
-            <strong>GitHub</strong>
+            <strong> GitHub </strong>
           </Tooltip>
         }
       >
@@ -42,11 +45,11 @@ const SideBar = () => {
         placement={"top"}
         overlay={
           <Tooltip>
-            <strong>Linked In Profile</strong>
+            <strong>Email Me!</strong>
           </Tooltip>
         }
       >
-        <a href='#' target='_blank' className='icon_block'>
+        <a type='button' onClick={sendEmail} className='icon_block'>
           <i className='far fa-envelope fa-2x'></i>
         </a>
       </OverlayTrigger>

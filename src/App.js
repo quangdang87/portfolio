@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 
 import NavBar from "./components/layout/NavBar";
@@ -11,9 +11,11 @@ import Contact from "./components/pages/Contact";
 import Greetings from "./components/Greetings";
 import {Row, Col, Container} from "react-bootstrap";
 import SideBar from "./components/SideBar";
+import ContactUs from "./components/pages/ContactUs";
 
 function App() {
   const {isSticky, element} = useSticky();
+  const [show, setShow] = useState(false);
 
   return (
     <div
@@ -23,7 +25,8 @@ function App() {
       }}
     >
       <NavBar isSticky={isSticky} />
-      <SideBar />
+      <SideBar show={show} setShow={setShow} />
+      {show && <ContactUs show={show} setShow={setShow} />}
       <Container>
         <Row>
           <Greetings element={element} />

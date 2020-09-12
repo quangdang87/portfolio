@@ -203,6 +203,22 @@ h6 {
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
+.text6 {
+  color: #98b1bb;
+  font-family: "Marck Script", cursive;
+  font-size: 25px;
+  font-weight: 800;
+
+  margin-top: 20px;
+  display: block;
+  margin: auto;
+}
+.text7 {
+  color: #070707;
+  font-size: 25px;
+  margin-top: 20px;
+  display: block;
+}
 .list1 {
   padding-left: 0px;
 }

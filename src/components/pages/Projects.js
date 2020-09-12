@@ -15,6 +15,10 @@ import ptyd_menu from "../../static/images/PTYD-menu.png";
 import ptyd_mealplan from "../../static/images/PTYD-mealPlan.png";
 import ptyd_findus from "../../static/images/PTYD-findus.png";
 import ptyd_menuthisweek from "../../static/images/PTYD-menuthisweek.png";
+import cs_shop from "../../static/images/CS-shop.png";
+import cs_search from "../../static/images/CS-search.png";
+import cs_index from "../../static/images/CS-index.png";
+import cs_buypost from "../../static/images/CS-buypost.png";
 
 class Projects extends Component {
   constructor(props) {
@@ -24,6 +28,8 @@ class Projects extends Component {
         {
           id: 1,
           name: "Prep-To-Your-Door",
+          description:
+            "A full life-cycle web application that assists the business driving services to their customers.",
           achieved: [
             "Worked directly with the designer to build features for the client/front-end by using Reactjs.",
             "Implemented the Sign-Up and Login functionality which allow the client access to protected endpoints on the REST APIs server.",
@@ -46,6 +52,8 @@ class Projects extends Component {
         {
           id: 2,
           name: "Contact Keeper",
+          description:
+            "A full-stack web application that helps the user manage their contacts.",
           achieved: [
             "Applied Node.js, Express JS to develop a REST APIs server.",
             "Applied CSS and Reactjs to develop features for the front-end.",
@@ -58,11 +66,13 @@ class Projects extends Component {
         {
           id: 3,
           name: "Swag Company",
+          description:
+            "A full-stack web application where users can exchange their old company swags.",
           achieved: [
             "Worked closely with the designer to build the website’s features by applying HTML, CSS, JavaScript.",
             "Applied JQuery to develop animative and responsive web pages."
           ],
-          img: [],
+          img: [cs_search, cs_shop, cs_index, cs_buypost],
           url: null,
           github: "https://github.com/infinite-options/swag-marketplace"
         }
@@ -85,51 +95,54 @@ class Projects extends Component {
           {this.state.projects.map((project, id) => (
             <div key={id} className='project_box'>
               <div>
-                {project.url ? (
+                <div className='project_box'>
+                  {project.url ? (
+                    <OverlayTrigger
+                      placement={"top"}
+                      overlay={
+                        <Tooltip>
+                          <strong>Go to website</strong>
+                        </Tooltip>
+                      }
+                    >
+                      <a href={project.url} className='text3' id='name_link'>
+                        {project.name}
+                      </a>
+                    </OverlayTrigger>
+                  ) : (
+                    <OverlayTrigger
+                      placement={"top"}
+                      overlay={
+                        <Tooltip>
+                          <strong>
+                            Sorry! This project has not been deploy yet.
+                          </strong>
+                        </Tooltip>
+                      }
+                    >
+                      <h2 className='text3'>{project.name}</h2>
+                    </OverlayTrigger>
+                  )}
+
                   <OverlayTrigger
                     placement={"top"}
                     overlay={
                       <Tooltip>
-                        <strong>Go to website</strong>
+                        <strong>View Code in GitHub</strong>
                       </Tooltip>
                     }
                   >
-                    <a href={project.url} className='text3' id='name_link'>
-                      {project.name}
+                    <a
+                      href={project.github}
+                      target='_blank'
+                      className='text4'
+                      style={{float: "right", padding: "0px"}}
+                    >
+                      <i className='fas fa-code'></i>
                     </a>
                   </OverlayTrigger>
-                ) : (
-                  <OverlayTrigger
-                    placement={"top"}
-                    overlay={
-                      <Tooltip>
-                        <strong>
-                          Sorry! This project has not been deploy yet.
-                        </strong>
-                      </Tooltip>
-                    }
-                  >
-                    <h2 className='text3'>{project.name}</h2>
-                  </OverlayTrigger>
-                )}
-
-                <OverlayTrigger
-                  placement={"top"}
-                  overlay={
-                    <Tooltip>
-                      <strong>View Code in GitHub</strong>
-                    </Tooltip>
-                  }
-                >
-                  <a
-                    href={project.github}
-                    target='_blank'
-                    className='text4'
-                    style={{float: "right"}}
-                  >
-                    <i className='fas fa-code'></i>
-                  </a>
-                </OverlayTrigger>
+                  <h2 className='text6'>{project.description}</h2>
+                </div>
               </div>
               <Row key={id} className='example'>
                 <Col>
