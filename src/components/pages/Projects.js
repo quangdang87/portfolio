@@ -101,7 +101,7 @@ class Projects extends Component {
                       placement={"top"}
                       overlay={
                         <Tooltip>
-                          <strong>Go to website</strong>
+                          <strong>Go to the Website</strong>
                         </Tooltip>
                       }
                     >

@@ -43,10 +43,18 @@ const ContactUs = ({show, setShow}) => {
         <Modal.Body>
           <Form onSubmit={sendEmail}>
             <Form.Group>
+              <Form.Label>Your Name</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter your name'
+                name='name'
+              />
+            </Form.Group>
+            <Form.Group>
               <Form.Label>Your Email address</Form.Label>
               <Form.Control
                 type='email'
-                placeholder='Enter email'
+                placeholder='Enter your email'
                 name='email'
               />
             </Form.Group>
@@ -54,7 +62,7 @@ const ContactUs = ({show, setShow}) => {
               <Form.Label>Your Phone Number</Form.Label>
               <Form.Control
                 type='text'
-                placeholder='Phone Number'
+                placeholder='Enter your phone number'
                 name='phone_number'
               />
             </Form.Group>
