@@ -1,10 +1,11 @@
 import React from "react";
 import {Card, Row} from "react-bootstrap";
 import photoID from "../static/images/Quang2.jpg";
+import {bottom} from "@popperjs/core";
 
 const Greetings = ({element}) => {
   return (
-    <div ref={element} className='box'>
+    <div ref={element} className='box mb-3'>
       <Card style={{background: "transparent"}}>
         <Card.Body className='no_padding'>
           <Row id='greeting_wrap'>

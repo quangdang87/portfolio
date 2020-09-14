@@ -27,7 +27,7 @@ const TechnicalSkills = () => {
   ];
   return (
     <Fragment>
-      <div className='box box_edu'>
+      <div className='box box_edu mb-3'>
         <Card style={{background: "transparent", height: "100%"}}>
           <Card.Header>
             <Card.Title style={{textAlign: "center", paddingTop: "10px"}}>

@@ -90,7 +90,7 @@ const WorkExperiences = () => {
           </Row>
         </Card.Body>
       </Card>
-      <Card className='box mobile'>
+      <Card className='box box_edu mobile'>
         <Card.Header>
           <Card.Title style={{textAlign: "center", paddingTop: "10px"}}>
             <h3 style={{color: "#fc4e03"}}>EXPERIENCES</h3>
