@@ -1,6 +1,6 @@
 import React from "react";
 import emailjs from "emailjs-com";
-import {Modal, Button, Form} from "react-bootstrap";
+import {Modal, Form} from "react-bootstrap";
 const ContactUs = ({show, setShow}) => {
   const handleClose = () => {
     setShow(!show);

@@ -50,7 +50,7 @@ const SideBar = ({show, setShow}) => {
             </Tooltip>
           }
         >
-          <a type='button' onClick={sendEmail} className='icon_block'>
+          <a onClick={sendEmail} className='icon_block'>
             <i className='far fa-envelope fa-2x'></i>
           </a>
         </OverlayTrigger>
