@@ -70,7 +70,7 @@ const SideBar = ({show, setShow}) => {
         >
           <i className='fab fa-github'></i>
         </a>
-        <a type='button' onClick={sendEmail} className='icon_block'>
+        <a onClick={sendEmail} className='icon_block'>
           <i className='far fa-envelope'></i>
         </a>
       </div>
