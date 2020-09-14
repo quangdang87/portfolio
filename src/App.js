@@ -31,7 +31,8 @@ function App() {
         <Row>
           <Greetings element={element} />
         </Row>
-        <Row style={{marginTop: "20px"}}>
+        {/*for big screen*/}
+        <Row style={{marginTop: "20px"}} className='is_mobile'>
           <Col style={{paddingLeft: "0px"}}>
             <Education />
           </Col>
@@ -39,6 +40,13 @@ function App() {
             <TechnicalSkills />
           </Col>
         </Row>
+
+        {/*for media screen*/}
+        <Row style={{marginTop: "20px"}} className='mobile'>
+          <Education />
+          <TechnicalSkills />
+        </Row>
+        {/*for media screen END*/}
         <Row style={{marginTop: "20px"}}>
           <WorkExperiences />
         </Row>

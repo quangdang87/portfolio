@@ -12,7 +12,7 @@ const Greetings = ({element}) => {
 
             <h1 className='greeting greeting_font'>
               &emsp;Hi! My name is Quang Dang. I've just graduated from
-              University Of California - Santa Cruz. I like technologies and
+              University of California - Santa Cruz. I like technologies and
               photography. I'm looking for a position where I can have the
               opportunity to use my abilities in Software development to work
               for a mission that I am passionate about.

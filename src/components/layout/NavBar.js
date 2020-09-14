@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-scroll";
 
 const NavBar = ({isSticky}) => {
+  const [show, setShow] = useState(false);
+  const showSanwich = () => {
+    console.log(show);
+    setShow(!show);
+  };
   return (
     <div className={isSticky ? "navbar_sticky" : "navbar"}>
       <div
@@ -27,7 +32,10 @@ const NavBar = ({isSticky}) => {
         </a>
       </div>
 
-      <ul style={{paddingRight: "50px", marginBottom: "0px"}}>
+      <ul
+        style={{paddingRight: "50px", marginBottom: "0px"}}
+        className='is_mobile'
+      >
         <Link
           activeClass='active'
           to='home'
@@ -42,17 +50,6 @@ const NavBar = ({isSticky}) => {
 
         <Link
           activeClass='active'
-          to='contact'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className='cursor'
-        >
-          Contact
-        </Link>
-        <Link
-          activeClass='active'
           to='projects'
           spy={true}
           smooth={true}
@@ -62,7 +59,64 @@ const NavBar = ({isSticky}) => {
         >
           Projects
         </Link>
+        <Link
+          activeClass='active'
+          to='contact'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className='cursor'
+        >
+          Contact
+        </Link>
       </ul>
+      <ul className='mobile'>
+        <button className='btn1' onClick={showSanwich}>
+          <i className='fa fa-bars' style={{color: "white"}}></i>
+        </button>
+      </ul>
+      {show && (
+        <div className='sanwich' onClick={showSanwich}>
+          <Link
+            activeClass='active'
+            to='home'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className='cursor'
+            onClick={showSanwich}
+          >
+            Home
+          </Link>
+
+          <Link
+            activeClass='active'
+            to='projects'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className='cursor'
+            onClick={showSanwich}
+          >
+            Projects
+          </Link>
+          <Link
+            activeClass='active'
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className='cursor'
+            onClick={showSanwich}
+          >
+            Contact
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

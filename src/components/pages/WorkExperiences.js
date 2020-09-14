@@ -35,7 +35,7 @@ const WorkExperiences = () => {
   return (
     <Fragment>
       <Card
-        className='box'
+        className='box is_mobile'
         style={{background: "transparent", height: "420px", width: "100%"}}
       >
         <Card.Header>
@@ -79,7 +79,7 @@ const WorkExperiences = () => {
               ))}
             </Col>
             {current !== null && (
-              <Col>
+              <Col xs='9'>
                 {current.achieved.map((val, id) => (
                   <ul className='list1' key={id}>
                     <li>{val}</li>
@@ -88,6 +88,44 @@ const WorkExperiences = () => {
               </Col>
             )}
           </Row>
+        </Card.Body>
+      </Card>
+      <Card className='box mobile'>
+        <Card.Header>
+          <Card.Title style={{textAlign: "center", paddingTop: "10px"}}>
+            <h3 style={{color: "#fc4e03"}}>EXPERIENCES</h3>
+          </Card.Title>
+        </Card.Header>
+        <Card.Body>
+          {experienced.map((val, id) => (
+            <Row>
+              <Card.Header style={{textAlign: "center"}}>
+                <p className='text1'>{val.company}</p>
+                <ul
+                  style={{listStyle: "none", maginTop: "0px"}}
+                  className='list1'
+                >
+                  <li
+                    className='text2'
+                    style={{fontWeight: "700", fontSize: "15px"}}
+                  >
+                    {" "}
+                    {val.role}{" "}
+                  </li>
+                  <li className='text2' style={{fontSize: "13px"}}>
+                    {val.duration}
+                  </li>
+                </ul>
+              </Card.Header>
+              <Card.Body>
+                {val.achieved.map((a, id) => (
+                  <ul className='list1' key={id} style={{paddingLeft: "10px"}}>
+                    <li>{a}</li>
+                  </ul>
+                ))}
+              </Card.Body>
+            </Row>
+          ))}
         </Card.Body>
       </Card>
     </Fragment>

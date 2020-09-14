@@ -2,9 +2,32 @@ import React, {Fragment} from "react";
 import {Card, Row, Col} from "react-bootstrap";
 
 const Education = () => {
+  const educations = [
+    {
+      id: 1,
+      facility: "University of California",
+      major: "B.S. Computer Science",
+      graduated: "June 2020",
+      gpa: 3.52
+    },
+    {
+      id: 2,
+      facility: "Chabot College",
+      major: "A.S. Computer Science",
+      graduated: "May 2018",
+      gpa: 3.83
+    },
+    {
+      id: 3,
+      facility: "Chabot College",
+      major: "A.S. Mathematics",
+      graduated: "May 2018",
+      gpa: 3.83
+    }
+  ];
   return (
     <Fragment>
-      <div className='box' style={{height: "520px"}}>
+      <div className='box box_edu'>
         <Card style={{background: "transparent", height: "100%"}}>
           <Card.Header>
             <Card.Title style={{textAlign: "center", paddingTop: "10px"}}>
@@ -12,29 +35,16 @@ const Education = () => {
             </Card.Title>
           </Card.Header>
           <Card.Body>
-            <Row className='h-33'>
-              <Col xs='9'>
-                <Card.Title>University of California</Card.Title>
-                <Card.Text>B.S. Computer Science</Card.Text>
-              </Col>
-              <Col>Jun 2020</Col>
-            </Row>
-            <Row className='h-33' style={{marginTop: "20px"}}>
-              <Col xs='9'>
-                <Card.Title>Chabot College</Card.Title>
-                <Card.Text>A.S. Computer Science</Card.Text>
-              </Col>
-              <Col>May 2018</Col>
-            </Row>
-            <Row className='h-33' style={{marginTop: "20px"}}>
-              <Col xs='9'>
-                <Card.Title style={{fontWeight: "700"}}>
-                  Chabot College
-                </Card.Title>
-                <Card.Text>A.S. Mathematics</Card.Text>
-              </Col>
-              <Col>May 2018</Col>
-            </Row>
+            {educations.map((edu, id) => (
+              <Row key={id} className='h-33'>
+                <Col xs='9'>
+                  <Card.Title>{edu.facility}</Card.Title>
+                  <Card.Text>{edu.major}</Card.Text>
+                  <Card.Text>GPA: {edu.gpa}</Card.Text>
+                </Col>
+                <Col xs='3'>{edu.graduated}</Col>
+              </Row>
+            ))}
           </Card.Body>
         </Card>
       </div>

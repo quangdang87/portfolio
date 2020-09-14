@@ -145,6 +145,7 @@ h6 {
   grid-gap: 2rem;
 }
 .box {
+  background: transparent;
   box-shadow: 2px 4px 8px 2px rgba(230, 228, 228, 0.842);
   transition: 0.3s;
   border-radius: 10px;
@@ -152,10 +153,12 @@ h6 {
 .box:hover {
   box-shadow: 4px 8px 16px 4px rgba(230, 228, 228, 0.842);
 }
+.box_edu {
+  height: 520px;
+}
 .h-33 {
   height: 33.33%;
 }
-
 .btn1 {
   background: transparent;
   text-align: left;
@@ -205,7 +208,7 @@ h6 {
 }
 .text6 {
   color: #98b1bb;
-  font-family: "Marck Script", cursive;
+  font-family: "Times New Roman", Times;
   font-size: 25px;
   font-weight: 800;
 
@@ -246,9 +249,12 @@ h6 {
   padding: 0px 5px 0px 1.3% !important;
   overflow: hidden;
 }
+
 .greeting_font {
-  font-family: "Dancing Script", "sans serif";
-  font-size: 40px;
+  font-family: "Times new roman", serif;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 38px;
   font-style: normal;
   font-variant: normal;
   font-weight: 300;
@@ -263,6 +269,7 @@ h6 {
   width: 60%;
   padding-left: 20px;
 }
+
 #greeting_img {
   width: 40%;
   float: left;
@@ -270,6 +277,147 @@ h6 {
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.mobile {
+  display: none !important;
+}
+@media only screen and (max-width: 768px) {
+  [class="col"] {
+    min-width: 100%;
+  }
+
+  [class="col-9"] {
+    width: 65%;
+    display: inline-block;
+    flex: 0 !important;
+    padding: 0px;
+    margin: 0 !important;
+  }
+  [class="col-5"] {
+    width: 50% !important;
+    display: inline-block;
+    flex: 0 !important;
+    padding: 0px;
+    margin: 0 !important;
+  }
+  [class="col-3"] {
+    width: 35%;
+    display: block;
+    padding: 0;
+    float: right;
+  }
+  .h-33 {
+    margin-bottom: 25px !important;
+  }
+  .box {
+    width: 100%;
+  }
+  .box_edu {
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  .is_mobile {
+    display: none !important;
+  }
+  .mobile {
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .greeting {
+    display: block;
+    width: 100%;
+    padding: 5px;
+  }
+  #greeting_img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    box-shadow: 2px 4px 16px -2px rgba(107, 127, 141, 0.904);
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .greeting_font {
+    font-family: "Times new roman", serif;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  .no_padding {
+    padding: 0px !important;
+  }
+  .row {
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+  }
+  .skill_col {
+    height: 400px;
+  }
+  .top_aligned {
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+  .card-body {
+    padding: 0.5rem;
+  }
+  .card-header {
+    padding: 0.25rem;
+  }
+  .text3 {
+    font-size: 18px;
+  }
+
+  .text6 {
+    font-size: 15px;
+  }
+  .text4 {
+    font-size: 15px;
+  }
+  .project_box {
+    padding: 10px 5px 10px 5px !important;
+  }
+  ul {
+    padding-left: 10px !important;
+  }
+  .sanwich {
+    display: block;
+    width: 80px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    right: 5px;
+    top: 45px;
+  }
+  .sanwich a {
+    display: block;
+    color: black;
+    text-align: center;
+  }
+  .sideBar1 {
+    display: block !important;
+    width: 30px;
+    height: 150px;
+    text-align: center;
+    background-color: #f2f3fa;
+    position: fixed;
+    z-index: 1;
+    top: 200px;
+    margin-left: 0.25rem !important;
+    border-radius: 3rem;
+  }
+  /* .icon_block {
+    display: inline-block;
+   
+  } */
 }
 .a_hover {
   height: 60px;
@@ -328,4 +476,10 @@ h6 {
   margin-top: 15px;
   position: relative;
   color: black;
+}
+.card-text {
+  margin-bottom: 0px;
+}
+.card-title {
+  margin-bottom: 0px;
 }

@@ -27,7 +27,7 @@ const TechnicalSkills = () => {
   ];
   return (
     <Fragment>
-      <div className='box' style={{height: "520px"}}>
+      <div className='box box_edu'>
         <Card style={{background: "transparent", height: "100%"}}>
           <Card.Header>
             <Card.Title style={{textAlign: "center", paddingTop: "10px"}}>
@@ -36,7 +36,7 @@ const TechnicalSkills = () => {
           </Card.Header>
           <Card.Body>
             <Row>
-              <Col>
+              <Col xs='5' className='top_aligned'>
                 <Card.Header>
                   <Card.Title
                     style={{
@@ -45,18 +45,24 @@ const TechnicalSkills = () => {
                       fontFamily: "Times New Roman"
                     }}
                   >
-                    Programing Languages
+                    Languages
                   </Card.Title>
                 </Card.Header>
                 <Card.Body>
-                  <ul style={{paddingLeft: "10px"}}>
+                  <ul
+                    style={{
+                      paddingLeft: "10px",
+                      textAlign: "center",
+                      listStyle: "none"
+                    }}
+                  >
                     {languages.map((val, i) => (
                       <li key={i}>{val}</li>
                     ))}
                   </ul>
                 </Card.Body>
               </Col>
-              <Col>
+              <Col xs='5' style={{float: "right"}}>
                 <Card.Header>
                   <Card.Title
                     style={{
@@ -69,7 +75,13 @@ const TechnicalSkills = () => {
                   </Card.Title>
                 </Card.Header>
                 <Card.Body>
-                  <ul>
+                  <ul
+                    style={{
+                      paddingLeft: "10px",
+                      textAlign: "center",
+                      listStyle: "none"
+                    }}
+                  >
                     {tools.map((val, i) => (
                       <li key={i}>{val}</li>
                     ))}

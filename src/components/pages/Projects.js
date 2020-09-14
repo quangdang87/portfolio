@@ -141,7 +141,7 @@ class Projects extends Component {
                       href={project.github}
                       target='_blank'
                       className='text4'
-                      style={{float: "right", padding: "0px"}}
+                      style={{float: "right"}}
                     >
                       <i className='fas fa-code'></i>
                     </a>
