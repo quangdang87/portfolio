@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 import {
   Card,
   Col,
@@ -15,10 +15,15 @@ import ptyd_menu from "../../static/images/PTYD-menu.png";
 import ptyd_mealplan from "../../static/images/PTYD-mealPlan.png";
 import ptyd_findus from "../../static/images/PTYD-findus.png";
 import ptyd_menuthisweek from "../../static/images/PTYD-menuthisweek.png";
+
 import cs_shop from "../../static/images/CS-shop.png";
 import cs_search from "../../static/images/CS-search.png";
 import cs_index from "../../static/images/CS-index.png";
 import cs_buypost from "../../static/images/CS-buypost.png";
+
+import ck_0 from "../../static/images/contactKeeper.png";
+import ck_1 from "../../static/images/contactKeeper1.png";
+import ck_2 from "../../static/images/contactKeeper2.png";
 
 class Projects extends Component {
   constructor(props) {
@@ -59,7 +64,7 @@ class Projects extends Component {
             "Applied CSS and Reactjs to develop features for the front-end.",
             "Managed and maintain user’s information through the database by using MongoDB."
           ],
-          img: [],
+          img: [ck_0, ck_1, ck_2],
           url: null,
           github: "https://github.com/quangdang87/contact-keeper"
         },
@@ -150,7 +155,38 @@ class Projects extends Component {
                 </div>
               </div>
               <Row key={id} className='example'>
-                <Col>
+                {project.img.length !== 0 && (
+                  <Card
+                    style={{
+                      width: "100%",
+                      marginBottom: "20px",
+                      backgroundColor: "transparent",
+                      justifyContent: "center"
+                    }}
+                  >
+                    <Card.Header className='text-center'>
+                      <h2 className='text4'>EXAMPLE</h2>
+                    </Card.Header>
+
+                    <Card.Body className='d-flex text-center'>
+                      <Carousel>
+                        {project.img.map((img, id) => (
+                          <Carousel.Item key={id}>
+                            <img src={img} className='img_carousel' />
+                          </Carousel.Item>
+                        ))}
+                      </Carousel>
+                    </Card.Body>
+                  </Card>
+                )}
+                <Card
+                  style={{
+                    width: "100%",
+
+                    backgroundColor: "transparent",
+                    justifyContent: "center"
+                  }}
+                >
                   <Card.Header className='text-center'>
                     <h2 className='text4'>THINGS I HAVE DONE</h2>
                   </Card.Header>
@@ -161,29 +197,7 @@ class Projects extends Component {
                       ))}
                     </ul>
                   </Card.Body>
-                </Col>
-                {project.img.length !== 0 && (
-                  <Col>
-                    <Card.Header className='text-center'>
-                      <h2 className='text4'>EXAMPLE</h2>
-                    </Card.Header>
-                    <Card.Body className='d-flex text-center'>
-                      <Carousel
-                        style={{
-                          height: "100%",
-                          margin: "auto",
-                          display: "flex"
-                        }}
-                      >
-                        {project.img.map((img, id) => (
-                          <Carousel.Item key={id}>
-                            <img src={img} className='img_carousel' />
-                          </Carousel.Item>
-                        ))}
-                      </Carousel>
-                    </Card.Body>
-                  </Col>
-                )}
+                </Card>
               </Row>
             </div>
           ))}

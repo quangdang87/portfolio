@@ -353,7 +353,8 @@ h6 {
   .row {
     width: 100%;
     display: inline-block;
-    margin: auto;
+    margin-right: 0px;
+    margin-left: 0px;
   }
   .skill_col {
     height: 400px;
