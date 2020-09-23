@@ -125,7 +125,7 @@ class Projects extends Component {
                       overlay={
                         <Tooltip>
                           <strong>
-                            Sorry! This project has not been deploy yet.
+                            Sorry! This project has not been deployed yet.
                           </strong>
                         </Tooltip>
                       }
