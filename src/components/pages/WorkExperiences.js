@@ -13,6 +13,7 @@ const WorkExperiences = () => {
         "Worked directly with designers to build features for web clients by using Reactjs",
         "Developed MySQL queries by using MySQLWorkBench and Amazon Relational Database Service (RDS) to support the REST APIs servers",
         "Applied Python to develop endpoints for a REST API server and using Zappa with Amazon AWS Lambda Function to maintain a serverless REST APIs application",
+        "Developed mobile apps by using C# and Xamarin",
         "Collaborated with a talented team to identify and develop the unit test for the REST API servers by using Python’s unit test."
       ]
     },
