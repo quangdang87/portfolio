@@ -13,8 +13,8 @@ const WorkExperiences = () => {
         "Worked directly with designers to build features for web clients by using Reactjs",
         "Developed MySQL queries by using MySQLWorkBench and Amazon Relational Database Service (RDS) to support the REST APIs servers",
         "Applied Python to develop endpoints for a REST API server and using Zappa with Amazon AWS Lambda Function to maintain a serverless REST APIs application",
-        "Collaborated with a talented team to identify and develop the unit test for the REST API servers by using Python’s unit test."
-      ]
+        "Collaborated with a talented team to identify and develop the unit test for the REST API servers by using Python’s unit test.",
+      ],
     },
     {
       id: 2,
@@ -23,19 +23,19 @@ const WorkExperiences = () => {
       duration: "Apr 2018 - Aug 2018",
       achieved: [
         "Worked directly with a high performing group to drive clerical and administrative needs to handle student records, management needs, and correspondence.",
-        "Utilized critical thinking and organizational skills to obtain and streamline files and student records."
-      ]
-    }
+        "Utilized critical thinking and organizational skills to obtain and streamline files and student records.",
+      ],
+    },
   ];
   const [current, setCurrent] = useState(experienced[0]);
 
-  const show = index => {
+  const show = (index) => {
     setCurrent(experienced[index]);
   };
   return (
     <Fragment>
       <Card
-        className='box is_mobile'
+        className="box is_mobile"
         style={{background: "transparent", height: "420px", width: "100%"}}
       >
         <Card.Header>
@@ -45,7 +45,7 @@ const WorkExperiences = () => {
         </Card.Header>
         <Card.Body>
           <Row>
-            <Col xs='3'>
+            <Col xs="3">
               {experienced.map((item, index) => (
                 <button
                   className={
@@ -59,19 +59,19 @@ const WorkExperiences = () => {
                   }}
                   key={index}
                 >
-                  <p className='text1'>{item.company}</p>
+                  <p className="text1">{item.company}</p>
                   <ul
                     style={{listStyle: "none", maginTop: "0px"}}
-                    className='list1'
+                    className="list1"
                   >
                     <li
-                      className='text2'
+                      className="text2"
                       style={{fontWeight: "700", fontSize: "15px"}}
                     >
                       {" "}
                       {item.role}{" "}
                     </li>
-                    <li className='text2' style={{fontSize: "13px"}}>
+                    <li className="text2" style={{fontSize: "13px"}}>
                       {item.duration}
                     </li>
                   </ul>
@@ -79,9 +79,9 @@ const WorkExperiences = () => {
               ))}
             </Col>
             {current !== null && (
-              <Col xs='9'>
+              <Col xs="9">
                 {current.achieved.map((val, id) => (
-                  <ul className='list1' key={id}>
+                  <ul className="list1" key={id}>
                     <li>{val}</li>
                   </ul>
                 ))}
@@ -90,7 +90,7 @@ const WorkExperiences = () => {
           </Row>
         </Card.Body>
       </Card>
-      <Card className='box box_edu mobile'>
+      <Card className="box box_edu mobile">
         <Card.Header>
           <Card.Title style={{textAlign: "center", paddingTop: "10px"}}>
             <h3 style={{color: "#fc4e03"}}>EXPERIENCES</h3>
@@ -100,26 +100,26 @@ const WorkExperiences = () => {
           {experienced.map((val, id) => (
             <Row>
               <Card.Header style={{textAlign: "center"}}>
-                <p className='text1'>{val.company}</p>
+                <p className="text1">{val.company}</p>
                 <ul
                   style={{listStyle: "none", maginTop: "0px"}}
-                  className='list1'
+                  className="list1"
                 >
                   <li
-                    className='text2'
+                    className="text2"
                     style={{fontWeight: "700", fontSize: "15px"}}
                   >
                     {" "}
                     {val.role}{" "}
                   </li>
-                  <li className='text2' style={{fontSize: "13px"}}>
+                  <li className="text2" style={{fontSize: "13px"}}>
                     {val.duration}
                   </li>
                 </ul>
               </Card.Header>
               <Card.Body>
                 {val.achieved.map((a, id) => (
-                  <ul className='list1' key={id} style={{paddingLeft: "10px"}}>
+                  <ul className="list1" key={id} style={{paddingLeft: "10px"}}>
                     <li>{a}</li>
                   </ul>
                 ))}
